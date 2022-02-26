@@ -1,8 +1,9 @@
 import React from "react"
+import Pricing from "./TrackCard/TrackCard"
 const EngTrack = () => {
     return (
         <div>
-            Engineering Track
+            <Pricing />
         </div>
     )
 }

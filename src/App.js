@@ -8,6 +8,10 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import { Navbar, Footer } from './components';
 import EngTrack from './EngineeringTrack/EngTrack';
+import FirstYear from './EngineeringTrack/TrackCard/Components/FirstYear/FirstYear';
+import SecondYear from './EngineeringTrack/TrackCard/Components/SecondYear/SecondYear';
+import ThirdYear from './EngineeringTrack/TrackCard/Components/ThirdYear/ThirdYear';
+import FourthYear from './EngineeringTrack/TrackCard/Components/FourthYear/FourthYear';
 
 function App() {
   return (
@@ -16,11 +20,15 @@ function App() {
       <ScrollToTop />
       <Navbar />
       <Switch>
-        <Route path='/' exact component={Home} />
-        <Route path='/services' component={Services} />
-        <Route path='/products' component={Products} />
-        <Route path='/sign-up' component={SignUp} />
-        <Route path='/EngTrack' component={EngTrack} />
+        <Route exact path='/' component={Home} />
+        <Route exact path='/engtrack' component={EngTrack} />
+        <Route exact path='/engtrack/firstyear' component={FirstYear} />
+        <Route exact path='/engtrack/secondyear' component={SecondYear} />
+        <Route exact path='/engtrack/thirdyear' component={ThirdYear} />
+        <Route exact path='/engtrack/fourthyear' component={FourthYear} />
+        <Route exact path='/products' component={Products} />
+        <Route exact path='/sign-up' component={SignUp} />
+        <Route exact path='/services' component={Services} />
       </Switch>
       <Footer />
     </Router>

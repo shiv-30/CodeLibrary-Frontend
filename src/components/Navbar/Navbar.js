@@ -39,7 +39,7 @@ function Navbar() {
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
-        <Nav>
+        <Nav style={{fontSize:"20px"}}>
           <NavbarContainer>
             <NavLogo to='/' onClick={closeMobileMenu}>
               <NavIcon />
@@ -55,7 +55,7 @@ function Navbar() {
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to='/services' onClick={closeMobileMenu}>
+                <NavLinks to='/engtrack' onClick={closeMobileMenu}>
                   Engineering Track
                 </NavLinks>
               </NavItem>
