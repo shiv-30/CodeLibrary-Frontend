@@ -12,6 +12,8 @@ import FirstYear from './EngineeringTrack/TrackCard/Components/FirstYear/FirstYe
 import SecondYear from './EngineeringTrack/TrackCard/Components/SecondYear/SecondYear';
 import ThirdYear from './EngineeringTrack/TrackCard/Components/ThirdYear/ThirdYear';
 import FourthYear from './EngineeringTrack/TrackCard/Components/FourthYear/FourthYear';
+import FirstYearComponent from './EngineeringTrack/TrackCard/Components/FirstYear/FirstYearComponent/FirstYearComponent';
+import Cpp from './EngineeringTrack/TrackCard/Components/FirstYear/FirstYearComponent/Cpp';
 
 function App() {
   return (
@@ -22,10 +24,13 @@ function App() {
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/engtrack' component={EngTrack} />
-        <Route exact path='/engtrack/firstyear' component={FirstYear} />
-        <Route exact path='/engtrack/secondyear' component={SecondYear} />
-        <Route exact path='/engtrack/thirdyear' component={ThirdYear} />
-        <Route exact path='/engtrack/fourthyear' component={FourthYear} />
+          <Route exact path='/engtrack/firstyear' component={FirstYear} />
+            <Route exact path='/engtrack/firstyear/component' component={FirstYearComponent} />
+              <Route exact path='/engtrack/firstyear/component/cpp' component={Cpp} />
+
+          <Route exact path='/engtrack/secondyear' component={SecondYear} />
+          <Route exact path='/engtrack/thirdyear' component={ThirdYear} />
+          <Route exact path='/engtrack/fourthyear' component={FourthYear} />
         <Route exact path='/products' component={Products} />
         <Route exact path='/sign-up' component={SignUp} />
         <Route exact path='/services' component={Services} />
