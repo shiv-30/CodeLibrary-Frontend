@@ -28,7 +28,7 @@ const Cpp = () => {
         <header>C++ Tutorials</header>
         {
           titles.forEach(element=>{
-            // <CardDetails data={element} />
+            // <CardDetails data={element}  />
             console.log(element);
           })
         }
